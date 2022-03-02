@@ -1,3 +1,3 @@
 # comprog2
 
-Activities inside /src
+Activities inside /src/camo/
