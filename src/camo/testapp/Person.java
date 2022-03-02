@@ -16,9 +16,7 @@ public class Person {
         this.address = a;
     }
 
-    public String getFirstName() {
-        return this.firstName;
-    }
+    public String getFirstName() { return this.firstName; }
     public String getLastName() {
         return this.lastName;
     }

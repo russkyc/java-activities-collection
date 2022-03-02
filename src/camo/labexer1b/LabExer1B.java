@@ -1,4 +1,4 @@
-package labexer1b;
+package camo.labexer1b;
 
 //Imports
 import java.util.Scanner;
