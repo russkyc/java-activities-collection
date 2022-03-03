@@ -1,4 +1,4 @@
-package camo.oopproject;
+package camo.oopproject.models;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -9,17 +9,17 @@ public class Course {
     private String courseDescription;
     private ArrayList<Subject> subjects;
 
-    Course(){
+    public Course(){
         setCourseCode("");
         setCourseDescription("");
     }
 
-    Course(String courseCode, String courseDescription){
+    public Course(String courseCode, String courseDescription){
         setCourseCode(courseCode);
         setCourseDescription(courseDescription);
     }
 
-    Course(String courseCode, String courseDescription, ArrayList<Subject> newsubjects){
+    public Course(String courseCode, String courseDescription, ArrayList<Subject> newsubjects){
         setCourseCode(courseCode);
         setCourseDescription(courseDescription);
         setSubjects(newsubjects);

@@ -1,6 +1,6 @@
-package camo.oopproject;
+package camo.oopproject.models;
 
-public class Student extends Person{
+public class Student extends Person {
 
     private String studentNumber;
     private Course course;

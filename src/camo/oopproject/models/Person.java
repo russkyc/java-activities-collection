@@ -1,4 +1,4 @@
-package camo.oopproject;
+package camo.oopproject.models;
 
 public class Person {
 

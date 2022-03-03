@@ -1,5 +1,9 @@
 package camo.oopproject;
 
+import camo.oopproject.models.Course;
+import camo.oopproject.models.Student;
+import camo.oopproject.models.Subject;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -21,6 +25,7 @@ public class Main {
         studentList.add(new Student("John Russell","Camo","Daraga, Albay","10229393", bsitCourse));
         studentList.add(new Student("Juan","Dela Cruz","Legazpi, Albay","02339242", bscsCourse));
 
+        /*
         for(Student student : studentList){
 
             System.out.printf("\nStudent Number: %s\n",student.getStudentNumber());
@@ -37,6 +42,6 @@ public class Main {
             }
 
         }
-
+        */
     }
 }
