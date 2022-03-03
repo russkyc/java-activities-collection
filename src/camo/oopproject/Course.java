@@ -22,12 +22,12 @@ public class Course {
     Course(String courseCode, String courseDescription, ArrayList<Subject> newsubjects){
         setCourseCode(courseCode);
         setCourseDescription(courseDescription);
-        setSubjects(subjects);
+        setSubjects(newsubjects);
     }
 
     public void setCourseCode(String courseCode) { this.courseCode = courseCode; }
     public void setCourseDescription(String courseDescription) { this.courseDescription = courseDescription; }
-    public void setSubjects(ArrayList<Subject> newSubjects){ subjects = newSubjects; }
+    public void setSubjects(ArrayList<Subject> newSubjects){ this.subjects = newSubjects; }
 
     public String getCourseCode() { return courseCode; }
     public String getCourseDescription() { return courseDescription; }

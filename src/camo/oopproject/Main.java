@@ -5,17 +5,36 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Subject sub1 = new Subject("STS","Science Technology and Society",2);
-        Subject sub2 = new Subject("CP2","Computer Programming 2",3);
+        ArrayList<Subject> bsitSubjects = new ArrayList<>();
+        ArrayList<Subject> bscsSubjects = new ArrayList<>();
+        ArrayList<Student> studentList = new ArrayList<>();
 
-        ArrayList<Subject> newSubjects = new ArrayList<>();
-        newSubjects.add(sub1);
-        newSubjects.add(sub2);
+        bsitSubjects.add(new Subject("STS2","Science Technology and Society",3));
+        bsitSubjects.add(new Subject("COPRO2","Computer Programming 2",4));
 
-        Course newCourse = new Course("BSIT","Bachelor of Science in Information Technology",newSubjects);
-        Student newStudent = new Student("John Russell","Camo","Zone 5, Bascaran","10229393", newCourse);
+        bscsSubjects.add(new Subject("NSTP2","National Service Training Program",3));
+        bscsSubjects.add(new Subject("PCOMM","Purposive Communication",3));
 
-        System.out.println(newStudent.getCourse().getSubjects().get(0).getSubjectDescription());
+        Course bsitCourse = new Course("BSIT","Bachelor of Science in Information Technology",bsitSubjects);
+        Course bscsCourse = new Course("BSCS","Bachelor of Science in Computer Science",bscsSubjects);
+
+        studentList.add(new Student("John Russell","Camo","Daraga, Albay","10229393", bsitCourse));
+        studentList.add(new Student("Juan","Dela Cruz","Legazpi, Albay","02339242", bscsCourse));
+
+        for(Student student : studentList){
+
+            System.out.printf("\nStudent Number: %s\n",student.getStudentNumber());
+            System.out.printf("Student Name: %S, %s\n",student.getLastName(),student.getFirstName());
+            System.out.printf("Student Address: %s\n",student.getAddress());
+            System.out.printf("Student Course: (%s) %s\n",student.getCourse().getCourseCode(),student.getCourse().getCourseDescription());
+            System.out.printf("Student Subjects:\n");
+
+            for(Subject subject : student.getCourse().getSubjects()){
+
+                System.out.printf("%s-%s (%d)\n",subject.getSubjectCode(),subject.getSubjectDescription(),subject.getUnits());
+
+            }
+        }
 
     }
 }

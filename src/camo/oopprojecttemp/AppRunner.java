@@ -13,16 +13,24 @@ import java.util.ArrayList;
  */
 public class AppRunner {
     public static void main(String[] args) {
-        Subject sub1 = new Subject("COPRO1", "COMPUTER PROGRAMMING 1", 4);
-        Subject sub2 = new Subject("COPRO2", "COMPUTER PROGRAMMING 2", 4);
+
+        ArrayList<Subject> bsitSubjectList = new ArrayList<>();
+        bsitSubjectList.add(new Subject("COPRO1", "COMPUTER PROGRAMMING 1", 4));
+        bsitSubjectList.add(new Subject("COPRO2", "COMPUTER PROGRAMMING 2", 4));
+
+        ArrayList<Subject> bscsSubjectList = new ArrayList<>();
+        bscsSubjectList.add(new Subject("STS01","Science Technology and Society",3));
+        bscsSubjectList.add(new Subject("SYSAD2","Systems Administration",3));
         
-        ArrayList<Subject> subjectList = new ArrayList<Subject>();
-        subjectList.add(sub1);
-        subjectList.add(sub2);
-        
-        Course c1 = new Course("BSIT", "BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY", subjectList);
+        Course c1 = new Course("BSIT", "BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY", bsitSubjectList);
+        Course c2 = new Course("BSCS", "BACHELOR OF SCIENCE IN COMPUTER SCIENCE", bscsSubjectList);
         
         Student s1 = new Student("BSIT1001", c1);
+        s1.setFirstName("JUAN");
+        s1.setLastName("DELA CRUZ");
+        s1.setAddress("ALBAY");
+
+        Student s2 = new Student("BSIT1001", c1);
         s1.setFirstName("JUAN");
         s1.setLastName("DELA CRUZ");
         s1.setAddress("ALBAY");
