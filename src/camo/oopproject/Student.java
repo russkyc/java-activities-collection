@@ -7,12 +7,19 @@ public class Student extends Person{
 
     public Student(){
         setStudentNumber("");
-        setCourse(new Course("","",new Subject("","",0)));
+        setCourse(new Course());
     }
 
     public Student(String newStudentNumber, Course newCourse){
         setStudentNumber(newStudentNumber);
         setCourse(newCourse);
+    }
+
+    public Student(String newFirstName, String newLastName, String newAddress, String newStudentNumber){
+        setFirstName(newFirstName);
+        setLastName(newLastName);
+        setAddress(newAddress);
+        setStudentNumber(newStudentNumber);
     }
 
     public Student(String newFirstName, String newLastName, String newAddress, String newStudentNumber, Course newCourse){

@@ -7,7 +7,7 @@ public class Course {
 
     private String courseCode;
     private String courseDescription;
-    private List<Subject> subjects = new ArrayList<Subject>();
+    private ArrayList<Subject> subjects;
 
     Course(){
         setCourseCode("");
@@ -19,15 +19,15 @@ public class Course {
         setCourseDescription(courseDescription);
     }
 
-    Course(String courseCode, String courseDescription, Subject subject){
+    Course(String courseCode, String courseDescription, ArrayList<Subject> newsubjects){
         setCourseCode(courseCode);
         setCourseDescription(courseDescription);
-        setSubjects(subject);
+        setSubjects(subjects);
     }
 
     public void setCourseCode(String courseCode) { this.courseCode = courseCode; }
     public void setCourseDescription(String courseDescription) { this.courseDescription = courseDescription; }
-    public void setSubjects(Subject subject){ subjects.add(subject); }
+    public void setSubjects(ArrayList<Subject> newSubjects){ subjects = newSubjects; }
 
     public String getCourseCode() { return courseCode; }
     public String getCourseDescription() { return courseDescription; }
