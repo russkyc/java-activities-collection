@@ -29,11 +29,8 @@ public class Main {
             System.out.printf("Student Course: (%s) %s\n",student.getCourse().getCourseCode(),student.getCourse().getCourseDescription());
             System.out.printf("Student Subjects:\n");
 
-            for(Subject subject : student.getCourse().getSubjects()){
+            for(Subject subject : student.getCourse().getSubjects()) System.out.printf("%s-%s (%d)\n",subject.getSubjectCode(),subject.getSubjectDescription(),subject.getUnits());
 
-                System.out.printf("%s-%s (%d)\n",subject.getSubjectCode(),subject.getSubjectDescription(),subject.getUnits());
-
-            }
         }
 
     }
