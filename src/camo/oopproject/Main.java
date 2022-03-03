@@ -27,9 +27,14 @@ public class Main {
             System.out.printf("Student Name: %S, %s\n",student.getLastName(),student.getFirstName());
             System.out.printf("Student Address: %s\n",student.getAddress());
             System.out.printf("Student Course: (%s) %s\n",student.getCourse().getCourseCode(),student.getCourse().getCourseDescription());
-            System.out.printf("Student Subjects:\n");
+            System.out.print("Student Subjects:\n");
 
-            for(Subject subject : student.getCourse().getSubjects()) System.out.printf("%s-%s (%d)\n",subject.getSubjectCode(),subject.getSubjectDescription(),subject.getUnits());
+            int index = 1;
+
+            for(Subject subject : student.getCourse().getSubjects()){
+                System.out.printf("%d %s-%s (%d)\n",index ,subject.getSubjectCode(),subject.getSubjectDescription(),subject.getUnits());
+                index++;
+            }
 
         }
 
