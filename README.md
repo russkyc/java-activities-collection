@@ -1,3 +1,3 @@
-# comprog2
+# Java Activities Collection 2021-2022
 
-Activities inside /src/camo/
+Use at your own discretion
